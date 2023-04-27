@@ -1,0 +1,6 @@
+spring_profiles_active=prod
+PROD_DB_HOST=containers-us-west-174.railway.app
+PROD_DB_PORT=7832
+PROD_DB_NAME=railway
+PROD_DB_PASSWORD=Q2Qw9YQcIQgP2EKnkdb2
+PROD_DB_USERNAME=postgres
