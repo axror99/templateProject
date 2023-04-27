@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>notSaved</title>
+</head>
+<body>
+<a href="index.html">notSecurity.html</a><br>
+<a href="notSecurity2.html">notSecurity2.html</a>
+<br>
+<button onclick="saved2()">Click me</button>
+</body>
+<script>
+
+</script>
+<script>
+    function saved2() {
+        fetch('http://localhost:9090/block/one')
+            .then((data) => {
+               return  data.json()
+            })
+            .then((dataJson) => {
+                console.log(dataJson);
+            })
+    }
+</script>
+</html>

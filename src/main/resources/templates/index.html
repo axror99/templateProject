@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>notSaved</title>
+</head>
+<body>
+<a href="notSecurity2.html">notSecurity2.html</a> <br>
+<a href="security.html">security.html</a> <br>
+
+<button onclick="saved()">Click me</button>
+</body>
+<script>
+
+</script>
+<script>
+    let id = 0;
+
+    function saved() {
+        id++;
+        fetch('http://localhost:9090/api/me/save/' + id,{
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then((data) => {
+               return  data.json()
+            })
+            .then((dataJson) => {
+                console.log(dataJson);
+            })
+    }
+</script>
+</html>

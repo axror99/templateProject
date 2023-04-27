@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>notSaved</title>
+</head>
+<body>
+<a href="index.html">notSecurity.html</a><br>
+<a href="security.html">security.html</a><br>
+<button onclick="saved1()">Click me</button>
+</body>
+<script>
+
+</script>
+<script>
+    function saved1() {
+        fetch('http://localhost:9090/api/me/list')
+            .then((data) => {
+               return  data.json()
+            })
+            .then((dataJson) => {
+                console.log(dataJson);
+            })
+    }
+</script>
+</html>
