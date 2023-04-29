@@ -8,3 +8,4 @@ FROM openjdk:17-alpine
 ADD target/templateProject.jar temporary.jar
 ENTRYPOINT ["java","-jar","temporary.jar"]
 EXPOSE 8080
+#dsv
